@@ -1,15 +1,15 @@
-// import App from './App.svelte'
-import Counter from './Counter.svelte'
+import App from './App.svelte'
+// import Counter from './Counter.svelte'
 
-const counter = new Counter({
-	target: document.body
-})
+// const counter = new Counter({
+// 	target: document.body
+// })
 
-// const app = new App({
-// 	target: document.body,
-// 	props: {
-// 		name: 'world'
-// 	}
-// });
+const app = new App({
+	target: document.body,
+	props: {
+		name: 'world'
+	}
+});
 
 export default app;
