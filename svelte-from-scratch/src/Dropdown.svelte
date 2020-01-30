@@ -1,33 +1,27 @@
 <script>
-  import { onDestroy } from "svelte";
   export let open = false;
+  export let trigger = "toggle";
   let dropdownElement;
 
-  function docClick(e) {
+  function windowClick(e) {
     if (e.target !== dropdownElement && !dropdownElement.contains(e.target)) {
       open = false;
     }
   }
-  function handleKeydown(e) {
+  function windowKeydown(e) {
     if (e.key === "Escape") open = false;
   }
 </script>
 
-<style>
-  .content {
-    position: absolute;
-  }
-</style>
-
-<svelte:window on:click={docClick} on:keydown={handleKeydown} />
-<div bind:this={dropdownElement}>
-  <div class="trigger" on:click={() => (open = !open)}>
+<svelte:window on:click={windowClick} on:keydown={windowKeydown} />
+<div class="bf-dropdown" bind:this={dropdownElement}>
+  <div class="bf-dropdown-trigger" on:click={() => (open = !open)}>
     <slot name="trigger">
-      <button>{open ? '˅' : '˃'} toggle</button>
+      <button class="bf-button">{open ? '▾' : '▸'} {trigger}</button>
     </slot>
   </div>
   {#if open}
-    <div class="content">
+    <div class="bf-dropdown-content">
       <slot>missing content</slot>
     </div>
   {/if}

@@ -1,25 +1,22 @@
 <script>
   import Dropdown from "./DropDown.svelte";
-  let open = true;
+  let open = false;
 </script>
 
-<style>
-  .appBar {
-    /* border-bottom: 1px solid #aaa; */
-    background-color: #333;
-    height: 2rem;
-  }
-  nav {
-    float: right;
-  }
-</style>
-
-<div class="appBar">
-  <span class="logo">[logo]</span>
+<div class="bf-appbar">
+  <a href="/" class="logo">svelte-from-scratch</a>
   <nav>
     <Dropdown bind:open>
-      <button slot="trigger">{open ? '˅' : '˃'} slot1</button>
-      <p>slot2</p>
+      <button class="bf-button" slot="trigger">{open ? '▾' : '▸'} notifications</button>
+      <a href="#">Message</a>
+      <a href="#">News!</a>
+      <a href="#">Some nagging</a>
+      <a href="#">Moar nags</a>
+    </Dropdown>
+    <Dropdown trigger="profile">
+      <a href="#">Settings</a>
+      <a href="#">Dark mode</a>
+      <a href="#">Sign out</a>
     </Dropdown>
   </nav>
 </div>

@@ -1,6 +1,6 @@
 <script>
   import AppBar from "./AppBar.svelte";
-  export let name;
+  let name = 'Eric';
 </script>
 
 <style>
