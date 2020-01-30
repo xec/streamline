@@ -55,3 +55,9 @@
   text-decoration: none;
   background-color: hsla(0, 0%, 100%, 0.1);
 }
+
+/* uhh hack?*/
+.fa-fw {
+    text-align: center;
+    width: 1.25em;
+}
