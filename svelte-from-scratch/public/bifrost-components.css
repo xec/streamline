@@ -1,3 +1,4 @@
+/* AppBar */
 .bf-appbar {
   background-color: #333;
   display: flex;
@@ -7,7 +8,7 @@
 .bf-appbar .logo {
   margin-left: 1rem;
   align-self: center;
-  color: #ff3e00;
+  color: white
 }
 .bf-appbar > nav {
   display: flex;
@@ -22,18 +23,32 @@
   border-left: 2px solid #222222;
   background-color: transparent;
   color: inherit;
+  border-radius: 0;
+  margin: 0;
 }
 .bf-appbar .bf-button:hover,
 .bf-appbar .bf-button.active {
   background-color: hsla(0, 0%, 100%, 0.1);
 }
 
+/* Button */
 .bf-button {
-  margin: 0;
+  margin: 0 .5rem;
   cursor: pointer;
   padding: 0.4rem 0.9rem;
+  background-color: transparent;
+  border: 2px solid #bb00ff;
+  color: inherit;
+  border-radius: 6rem;
+}
+.bf-button:hover {
+  background-color: #bb00ff;
+  border: 2px solid #bb00ff;
+  color: black;
+  text-decoration: none;
 }
 
+/* Dropdown */
 .bf-dropdown {
   position: relative;
   display: inline-block;

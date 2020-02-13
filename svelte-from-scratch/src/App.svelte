@@ -1,6 +1,6 @@
 <script>
   import AppBar from "./AppBar.svelte";
-  let name = 'Eric';
+  import Navigation from "./Navigation.svelte";
 </script>
 
 <style>
@@ -11,10 +11,14 @@
   }
 
   h1 {
+    font-family: "Mr Dafoe", cursive;
     color: #ff3e00;
-    text-transform: uppercase;
     font-size: 4em;
     font-weight: 100;
+    transform: rotate(-8deg);
+    background: -webkit-linear-gradient(94deg, yellow, #ff0000 23%, #bb00ff 76%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   @media (min-width: 640px) {
@@ -25,11 +29,12 @@
 </style>
 
 <AppBar />
+<Navigation />
 <main>
-  <h1>Hello {name}!</h1>
+  <h1>Streamline design</h1>
   <p>
     Visit the
-    <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
+    <a class="bf-button" href="https://svelte.dev/tutorial">Svelte tutorial</a>
     to learn how to build Svelte apps.
   </p>
 </main>

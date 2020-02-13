@@ -1,12 +1,16 @@
 <script>
   import Dropdown from "./DropDown.svelte";
+  import Icon from "svelte-awesome";
+  import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 </script>
 
 <div class="bf-appbar">
-  <a href="/" class="logo">svelte-from-scratch</a>
+  <a href="/" class="logo">Streamline</a>
   <nav>
-    <Dropdown let:open>
-      <button class="bf-button" slot="trigger">{open ? '▾' : '▸'} Notifications</button>
+    <Dropdown class="bf-appbar-item">
+      <button class="bf-button" slot="trigger" let:open>
+        {open ? '▾' : '▸'} Notifications
+      </button>
       <a href="#">Message</a>
       <a href="#">News!</a>
       <a href="#">Some nagging</a>
