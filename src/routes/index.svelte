@@ -4,13 +4,6 @@
 		margin: 0 auto;
 	}
 
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
-
 	figure {
 		margin: 0 0 1em 0;
 	}
@@ -36,7 +29,7 @@
 	<title>Sapper project template</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1 class="streak">Great success!</h1>
 
 <figure>
 	<img alt='Borat' src='great-success.png'>
