@@ -1,3 +1,9 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 /* AppBar */
 .bf-appbar {
@@ -69,7 +75,7 @@
 }
 .bf-navigation .fa-icon {
   fill: var(--bfc-base-text);
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 .bf-navigation > *:hover,
 .bf-navigation > .bf-active {
@@ -86,8 +92,8 @@
 }
 
 .bf-layout {
-  margin-top: var(--bf-appbar-height);
-  margin-left: var(--bf-navigation-width);
+  padding-top: var(--bf-appbar-height);
+  padding-left: var(--bf-navigation-width);
 }
 .bf-layout .bf-navigation {
   top: var(--bf-appbar-height);
@@ -95,6 +101,9 @@
 }
 .bf-layout .bf-appbar {
   z-index: 3;
+}
+.bf-layout > main {
+  min-height: calc(100vh - var(--bf-appbar-height));
 }
 
 /* Button */

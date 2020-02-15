@@ -1,6 +1,6 @@
 <script>
   import Icon from "svelte-awesome";
-  import { faHome, faInfoCircle, faSortAmountUp } from "@fortawesome/free-solid-svg-icons";
+  import { faHome, faInfoCircle, faSortAmountUp, faBorderAll } from "@fortawesome/free-solid-svg-icons";
 
   import AppBar from "../../svelte-from-scratch/src/AppBar.svelte";
   import Navigation from "../../svelte-from-scratch/src/Navigation.svelte";
@@ -30,5 +30,9 @@
   <a href="counter" class:bf-active={segment==='counter'}>
     <Icon data={faSortAmountUp} />
     Counter
+  </a>
+  <a href="fiveinarow" class:bf-active={segment==='fiveinarow'}>
+    <Icon data={faBorderAll} />
+    Five-in-a-row
   </a>
 </Navigation>
