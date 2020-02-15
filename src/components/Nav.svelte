@@ -8,10 +8,6 @@
   import DarkmodeToggle from "../../svelte-from-scratch/src/DarkmodeToggle.svelte";
 
   export let segment;
-  $: {
-    let t = segment
-    console.log(t)
-  }
 </script>
 
 <AppBar>
