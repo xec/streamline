@@ -1,20 +1,22 @@
 <script>
+  import { fade, fly } from "svelte/transition";
   let count = 0;
   const countLimit = 10;
   $: safe = count < countLimit;
-  function handleClick(e) {
-    count += 1;
-  }
 </script>
 
-<button class="bf-button" on:click={handleClick} disabled={!safe}>
+<button class="bf-button" on:click={() => count++} disabled={!safe}>
   Clicked {count} {count === 1 ? 'time' : 'times'}
 </button>
 
 <p>{count} doubled is {count * 2}</p>
+{#if count > 0}
+  <p transition:fade>How high can you go?</p>
+{/if}
 {#if !safe}
-  <p class="warning">
+  <p transition:fly={{ x: 200 }} class="warning">
     Count is dangerously high!
-    <button class="bf-button" on:click={_ => count = 0}>reset</button>
+    <br>
+    <button class="bf-button" on:click={_ => (count = 0)}>reset</button>
   </p>
 {/if}

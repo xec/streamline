@@ -1,16 +1,9 @@
-:root {
-  --appbar-height: 40px;
-  --navigation-width: 200px;
-  --bfc-base: #222;
-  --bfc-base-light: #333;
-}
 
 /* AppBar */
 .bf-appbar {
-  height: var(--appbar-height);
-  background-color: var(--bfc-base-light);
+  height: var(--bf-appbar-height);
+  background-color: var(--bfc-base-110);
   display: flex;
-  /* justify-content: flex-end; */
   justify-content: space-between;
   position: fixed;
   top: 0;
@@ -20,16 +13,15 @@
 .bf-appbar .logo {
   margin-left: 1rem;
   align-self: center;
-  color: white;
+  color: var(--bfc-base-text);
   letter-spacing: 4px;
   transition: all ease 1s;
-  color: #aaa;
   text-transform: uppercase;
 }
 .bf-appbar .logo:hover {
   letter-spacing: 20px;
   text-decoration: none;
-  color: #fff;
+  color: var(--bfc-base-fg);
 }
 .bf-appbar > nav {
   display: flex;
@@ -48,11 +40,11 @@
   margin: 0;
   outline: none;
   padding: 0 0.9rem;
-  height: var(--appbar-height);
+  height: var(--bf-appbar-height);
 }
 .bf-appbar .bf-button:hover,
 .bf-appbar .bf-button.active {
-  background-color: hsla(0, 0%, 100%, 0.1);
+  background-color: var(--bfc-base-120);
   border: none;
   border-left: 2px solid var(--bfc-base);
 }
@@ -64,17 +56,41 @@
   bottom: 0;
   position: fixed;
   width: 200px;
-  background-color: var(--bfc-base-light);
+  background-color: var(--bfc-base-110);
   border-top: 2px solid var(--bfc-base);
   z-index: 2;
 }
+.bf-navigation > *,
+.bf-navigation > *:visited {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--bfc-base-fg);
+}
+.bf-navigation .fa-icon {
+  fill: var(--bfc-base-text);
+  margin-right: .5rem;
+}
+.bf-navigation > *:hover,
+.bf-navigation > .bf-active {
+  background-color: var(--bfc-base-120);
+  text-decoration: none;
+  color: var(--bfc-base-fg);
+}
+.bf-navigation > .bf-active .fa-icon {
+  fill: var(--bfc-primary);
+}
+.bf-navigation > hr {
+  padding: 0;
+  border: 1px solid var(--bfc-base);
+}
 
 .bf-layout {
-  margin-top: var(--appbar-height);
-  margin-left: var(--navigation-width);
+  margin-top: var(--bf-appbar-height);
+  margin-left: var(--bf-navigation-width);
 }
 .bf-layout .bf-navigation {
-  top: var(--appbar-height);
+  top: var(--bf-appbar-height);
   z-index: 2;
 }
 .bf-layout .bf-appbar {
@@ -83,24 +99,24 @@
 
 /* Button */
 .bf-button {
-  margin: 0 0.5rem 0 0;
+  margin: 0.5rem 0.5rem 0 0;
   cursor: pointer;
   padding: 0.4rem 0.9rem;
   background-color: transparent;
-  border: 2px solid #d289ff;
+  border: 2px solid var(--bfc-primary);
   color: inherit;
   border-radius: 6rem;
 }
 .bf-button:hover {
-  background-color: #d289ff;
-  border: 2px solid #d289ff;
-  color: black;
+  background-color: var(--bfc-primary);
+  border: 2px solid var(--bfc-primary);
+  color: var(--bfc-base);
   text-decoration: none;
 }
 .bf-button[disabled] {
-  background-color: #222;
-  border: 2px solid #333;
-  color: #666;
+  background-color: var(--bfc-base);
+  border: 2px solid var(--bfc-base-120);
+  color: var(--bfc-base-150);
   cursor: not-allowed;
 }
 
@@ -111,7 +127,7 @@
 }
 .bf-dropdown-content {
   position: absolute;
-  background-color: #333;
+  background-color: var(--bfc-base-120);
   min-width: 150px;
   z-index: 2;
 }
@@ -125,7 +141,7 @@
 }
 .bf-dropdown-content > a:hover {
   text-decoration: none;
-  background-color: hsla(0, 0%, 100%, 0.1);
+  background-color: var(--bfc-base-120);
 }
 
 /* uhh hack?*/

@@ -1,5 +1,6 @@
 <script>
   import Nav from "../components/Nav.svelte";
+  import "../../svelte-from-scratch/public/bifrost-theme.css";
   import "../../svelte-from-scratch/public/bifrost-components.css";
   import "../../svelte-from-scratch/public/global.css";
   export let segment;
