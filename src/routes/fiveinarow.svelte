@@ -13,5 +13,5 @@
 </style>
 
 <div>
-  <FiveInARow />
+  <FiveInARow boardSize={25} />
 </div>
