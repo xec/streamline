@@ -1,7 +1,7 @@
 {
-  "name": "sapper-from-scratch",
-  "description": "Sapper from scratch",
-  "version": "0.0.1",
+  "name": "@xec/streamline",
+  "description": "Testing project for svelte, sapper and custom npm package",
+  "version": "0.0.2",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
@@ -12,6 +12,7 @@
     "test": "run-p --race dev cy:run"
   },
   "dependencies": {
+    "@xec/snowflakes": "file:../snowflakes",
     "compression": "^1.7.1",
     "polka": "next",
     "sirv": "^0.4.0"
@@ -23,7 +24,7 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/runtime": "^7.0.0",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
-    "@rollup/plugin-commonjs": "^11.0.0",
+    "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^6.0.0",
     "@rollup/plugin-replace": "^2.2.0",
     "cypress": "^3.8.2",

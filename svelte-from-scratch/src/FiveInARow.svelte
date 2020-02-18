@@ -110,7 +110,6 @@
         rows[i - 3][j + 3],
         rows[i - 4][j + 4]
       ];
-      console.log(combination, i, j);
       if (isWinningCombination(combination)) {
         winningCells = combination;
         return;
