@@ -3,16 +3,8 @@
   import "@xec/snowflakes/package/snowflakes.css";
   let speed = 1;
   let count = 90;
-  $: {
-    snowflakes.updateSpeed(speed);
-  }
-  $: {
-    snowflakes.updateCount(count);
-  }
-  function setSpeed(e) {
-    snowflakes.updateSpeed(e.target.value);
-    console.log(e);
-  }
+  $: snowflakes.updateSpeed(speed);
+  $: snowflakes.updateCount(count);
 </script>
 
 <style>
