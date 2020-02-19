@@ -18,7 +18,7 @@
 
 <AppBar>
   <DarkmodeToggle />
-  <a href="snowflakes">
+  <a href="snowflakes" class="bf-button" style="padding: 0.7rem">
     <Icon data={faSnowflake} />
   </a>
   <Dropdown trigger="Profile">

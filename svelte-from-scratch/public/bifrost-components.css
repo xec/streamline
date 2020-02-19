@@ -53,6 +53,7 @@ html {
   background-color: var(--bfc-base-120);
   border: none;
   border-left: 2px solid var(--bfc-base);
+  color: inherit;
 }
 
 /* Navigation */
