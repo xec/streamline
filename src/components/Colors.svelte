@@ -59,7 +59,7 @@
     min-width: 6rem;
     display: inline-block;
   }
-  .base {
+  .baseColor {
     background-color: var(--bfc-base-120);
     color: var(--bfc-base-200);
   }
@@ -67,6 +67,7 @@
     width: 10rem;
   }
   input[type="range"] {
+    width: 16rem;
     -webkit-appearance: none;
   }
   .hueRange {
@@ -83,6 +84,7 @@
   }
   td {
     padding-left: 1rem;
+    vertical-align: middle;
   }
   .colorTable {
     margin-top: 2rem;
@@ -102,10 +104,6 @@
         <label>Hue</label>
       </td>
       <td>
-        <input type="number" min="0" max="360" bind:value={hue} />
-        °
-      </td>
-      <td>
         <input
           class="hueRange"
           type="range"
@@ -113,14 +111,14 @@
           max="360"
           bind:value={hue} />
       </td>
+      <td>
+        <input type="number" min="0" max="360" bind:value={hue} />
+        °
+      </td>
     </tr>
     <tr>
       <td>
         <label>Saturation</label>
-      </td>
-      <td>
-        <input type="number" min="0" max="100" bind:value={saturation} />
-        %
       </td>
       <td>
         <input
@@ -130,14 +128,14 @@
           bind:value={saturation}
           style={saturationRangeStyle} />
       </td>
+      <td>
+        <input type="number" min="0" max="100" bind:value={saturation} />
+        %
+      </td>
     </tr>
     <tr>
       <td>
         <label>Lightness</label>
-      </td>
-      <td>
-        <input type="number" min="0" max="100" bind:value={baseLightness} />
-        %
       </td>
       <td>
         <input
@@ -146,6 +144,10 @@
           min="0"
           max="100"
           bind:value={baseLightness} />
+      </td>
+      <td>
+        <input type="number" min="0" max="100" bind:value={baseLightness} />
+        %
       </td>
     </tr>
   </body>
@@ -163,7 +165,7 @@
   </thead>
   <tbody>
     {#each percentages as p}
-      <tr class:base={p.percentage === baseLightness}>
+      <tr class:baseColor={p.percentage === baseLightness}>
         <td class="swatch" style={`background-color: ${p.css}`} />
         <td>{p.percentage}%</td>
         <td>{p.dark}</td>
