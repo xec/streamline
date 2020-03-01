@@ -12,7 +12,6 @@
     "test": "run-p --race dev cy:run"
   },
   "dependencies": {
-    "@xec/snowflakes": "file:../snowflakes",
     "compression": "^1.7.1",
     "polka": "next",
     "sirv": "^0.4.0"
@@ -27,7 +26,8 @@
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^6.0.0",
     "@rollup/plugin-replace": "^2.2.0",
-    "@xec/svelte-todo": "github:xec/svelte-todo",
+    "@xec/snowflakes": "0.0.3",
+    "@xec/svelte-todo": "^1.0.0",
     "cypress": "^3.8.2",
     "npm-run-all": "^4.1.5",
     "rollup": "^1.20.0",
