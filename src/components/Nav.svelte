@@ -6,7 +6,8 @@
     faSortAmountUp,
     faBorderAll,
     faSnowflake,
-    faEyeDropper
+    faEyeDropper,
+    faCheck
   } from "@fortawesome/free-solid-svg-icons";
 
   import AppBar from "../../svelte-from-scratch/src/AppBar.svelte";
@@ -53,5 +54,9 @@
   <a href="colors" class:bf-active={segment === 'colors'}>
     <Icon data={faEyeDropper} />
     Colors
+  </a>
+  <a href="todo" class:bf-active={segment === 'todo'}>
+    <Icon data={faCheck} />
+    Todo
   </a>
 </Navigation>

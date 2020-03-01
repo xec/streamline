@@ -1,6 +1,6 @@
 <script>
   import Icon from "svelte-awesome";
-  import { faMoon, faSun, faAdjust } from "@fortawesome/free-solid-svg-icons";
+  import { faAdjust } from "@fortawesome/free-solid-svg-icons";
 
   function toggleDarkmode() {
     document.body.classList.toggle("bf-lightmode");
@@ -21,7 +21,5 @@
 </style>
 
 <div class="toggle" on:click={toggleDarkmode} title="Toggle dark mode">
-  <!-- <Icon data={faMoon} />
-  <Icon data={faSun} /> -->
   <Icon data={faAdjust} />
 </div>
