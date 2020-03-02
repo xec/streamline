@@ -1,7 +1,13 @@
+<script>
+  import TransitionWrapper from "../components/TransitionWrapper.svelte";
+</script>
+
 <svelte:head>
-	<title>About</title>
+  <title>About</title>
 </svelte:head>
 
-<h1>About this site</h1>
+<TransitionWrapper>
+  <h1>About this site</h1>
 
-<p>This is the 'about' page. There's not much here.</p>
+  <p>This is the 'about' page. There's not much here.</p>
+</TransitionWrapper>

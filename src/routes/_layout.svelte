@@ -18,7 +18,7 @@
 <div class="bf-layout">
   <Nav {segment} />
 
-  <main>
-    <slot />
-  </main>
+    <main>
+      <slot />
+    </main>
 </div>

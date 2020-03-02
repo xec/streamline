@@ -1,5 +1,6 @@
 <script>
   import FiveInARow from "../../svelte-from-scratch/src/FiveInARow.svelte";
+  import TransitionWrapper from "../components/TransitionWrapper.svelte";
 </script>
 
 <style>
@@ -12,6 +13,12 @@
   }
 </style>
 
-<div>
-  <FiveInARow boardSize={25} />
-</div>
+<svelte:head>
+  <title>Five in a row</title>
+</svelte:head>
+
+<TransitionWrapper>
+  <div>
+    <FiveInARow boardSize={25} />
+  </div>
+</TransitionWrapper>

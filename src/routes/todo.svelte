@@ -1,5 +1,6 @@
 <script>
   import Todo from "@xec/svelte-todo";
+  import TransitionWrapper from "../components/TransitionWrapper.svelte";
 </script>
 
 <style>
@@ -19,6 +20,8 @@
   }
 </style>
 
-<div class="todoWrapper">
-  <Todo />
-</div>
+<TransitionWrapper>
+  <div class="todoWrapper">
+    <Todo />
+  </div>
+</TransitionWrapper>
