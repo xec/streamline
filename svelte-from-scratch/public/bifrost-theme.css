@@ -8,6 +8,7 @@
   --bfc-base-120: hsl(var(--bfc-base-hs), 24%);
   --bfc-base-110: hsl(var(--bfc-base-hs), 15%);
   --bfc-base-100: hsl(var(--bfc-base-hsl));
+  --bfc-base-0: hsl(var(--bfc-base-hs), 0%);
   --bfc-base: var(--bfc-base-100);
   --bfc-base-fg: var(--bfc-base-200);
   --bfc-base-text: var(--bfc-base-150);
@@ -29,6 +30,7 @@
   --bfc-base-120: hsl(var(--bfc-base-hs), 80%);
   --bfc-base-110: hsl(var(--bfc-base-hs), 90%);
   --bfc-base-100: hsl(var(--bfc-base-hsl));
+  --bfc-base-0: hsl(var(--bfc-base-hs), 100%);
   --bfc-base: var(--bfc-base-100);
   --bfc-base-fg: var(--bfc-base-200);
   --bfc-base-text: var(--bfc-base-150);
