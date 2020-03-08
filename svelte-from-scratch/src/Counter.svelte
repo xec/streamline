@@ -11,10 +11,10 @@
 
 <p>{count} doubled is {count * 2}</p>
 {#if count > 0}
-  <p transition:fade>How high can you go?</p>
+  <p transition:fade|local>How high can you go?</p>
 {/if}
 {#if !safe}
-  <p transition:fly={{ x: 200 }} class="warning">
+  <p transition:fly|local={{ x: 200 }} class="warning">
     Count is dangerously high!
     <br>
     <button class="bf-button" on:click={_ => (count = 0)}>reset</button>
