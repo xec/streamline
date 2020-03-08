@@ -66,6 +66,7 @@ html {
   background-color: var(--bfc-base-110);
   border-top: 2px solid var(--bfc-base);
   z-index: 2;
+  overflow: auto;
 }
 .bf-navigation > *,
 .bf-navigation > *:visited {
