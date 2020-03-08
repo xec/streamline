@@ -1,9 +1,18 @@
 <script>
+  import { onMount } from "svelte";
   import Icon from "svelte-awesome";
   import { faAdjust } from "@fortawesome/free-solid-svg-icons";
-
-  function toggleDarkmode() {
+  let lightmode = false;
+  onMount(async () => {
+    if (localStorage.lightmode === "true") {
+      lightmode = true;
+      document.body.classList.add("bf-lightmode");
+    }
+  });
+  function toggleMode() {
+    lightmode = !lightmode;
     document.body.classList.toggle("bf-lightmode");
+    localStorage.lightmode = lightmode;
   }
 </script>
 
@@ -20,6 +29,6 @@
   }
 </style>
 
-<div class="toggle" on:click={toggleDarkmode} title="Toggle dark mode">
+<div class="toggle" on:click={toggleMode} title="Toggle dark mode">
   <Icon data={faAdjust} />
 </div>
