@@ -18,11 +18,6 @@
     --todo-remove-bg: black;
     --todo-remove-text: white;
   }
-  .todoWrapper :global(.svelte-todo-input) {
-    border: var(--todo-input-border);
-    color: var(--todo-input-text);
-    background-color: var(--todo-input-bg);
-  }
 </style>
 
 <TransitionWrapper>
