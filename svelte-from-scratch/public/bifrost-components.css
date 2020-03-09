@@ -1,8 +1,18 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: hsla(var(--bfc-base-200-hsl), 0.2);
+  border-radius: 10px;
 }
 
 /* AppBar */
@@ -62,11 +72,16 @@ html {
   left: 0;
   bottom: 0;
   position: fixed;
-  width: 200px;
+  width: var(--bf-navigation-width);
   background-color: var(--bfc-base-110);
   border-top: 2px solid var(--bfc-base);
   z-index: 2;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: width 0.2s ease;
+}
+.bf-navigation-collapsed .bf-navigation {
+  width: var(--bf-navigation-width-collapsed);
 }
 .bf-navigation > *,
 .bf-navigation > *:visited {
@@ -74,10 +89,14 @@ html {
   padding: 1rem;
   text-decoration: none;
   color: var(--bfc-base-fg);
+  margin: 0;
+  white-space: nowrap;
 }
 .bf-navigation .fa-icon {
   fill: var(--bfc-base-text);
-  margin-right: 0.5rem;
+  margin-right: .8rem;
+  text-align: center;
+  width: 1.25em;
 }
 .bf-navigation > *:hover,
 .bf-navigation > .bf-active {
@@ -97,6 +116,10 @@ html {
 .bf-layout {
   padding-top: var(--bf-appbar-height);
   padding-left: var(--bf-navigation-width);
+  transition: padding-left 0.2s ease;
+}
+.bf-navigation-collapsed .bf-layout {
+  padding-left: var(--bf-navigation-width-collapsed);
 }
 .bf-layout .bf-navigation {
   top: var(--bf-appbar-height);
