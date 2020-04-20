@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Mr+Dafoe&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Mr+Dafoe&display=swap");
 
 html,
 body {
@@ -22,6 +22,7 @@ body {
 }
 
 .streak {
+  display: inline-block;
   font-family: "Mr Dafoe", cursive;
   color: #ff3e00;
   font-size: 4em;
@@ -30,8 +31,9 @@ body {
   background: -webkit-linear-gradient(90deg, yellow, #ff0000 23%, #bb00ff 76%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  padding: 0 1.5rem;
 }
 
 .bf-lightmode .snowflake {
-  fill: #88b5e6
+  fill: #88b5e6;
 }

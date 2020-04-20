@@ -7,7 +7,12 @@
 </svelte:head>
 
 <TransitionWrapper>
-  <h1>About this site</h1>
+  <h1 class="streak">Streamline!</h1>
 
-  <p>This is the 'about' page. There's not much here.</p>
+  <p>Hi there, my name is Eric Morton, and this is my playground.</p>
+
+  <p>
+    You can find me on
+    <a href="http://github.com/xec/">github</a>
+  </p>
 </TransitionWrapper>
