@@ -22,14 +22,20 @@
   <button class="bf-button" on:click={snowflakes.toggle}>Toggle snow</button>
 
   <div>
-    <label>Count</label>
-    <input type="range" min="1" max="250" bind:value={count} />
+    <label for="countInput">Count</label>
+    <input id="countInput" type="range" min="1" max="250" bind:value={count} />
     ({count})
   </div>
 
   <div>
-    <label>Speed</label>
-    <input type="range" min="0.1" max="10" step="0.1" bind:value={speed} />
+    <label for="speedInput">Speed</label>
+    <input
+      id="speedInput"
+      type="range"
+      min="0.1"
+      max="10"
+      step="0.1"
+      bind:value={speed} />
     ({speed})
   </div>
 </TransitionWrapper>

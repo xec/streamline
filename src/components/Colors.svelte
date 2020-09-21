@@ -7,7 +7,7 @@
     return percToDarkAndLight(p, i, hue, saturation);
   });
 
-  $: mainSwatchStyle = `background-color: hsl(${hue}, ${saturation}%, ${baseLightness}%)`
+  $: mainSwatchStyle = `background-color: hsl(${hue}, ${saturation}%, ${baseLightness}%)`;
 
   $: lightnessRangeStyle = `background-image: 
     linear-gradient(
@@ -55,7 +55,7 @@
   table {
     border-collapse: collapse;
   }
-  label {
+  .label {
     min-width: 6rem;
     display: inline-block;
   }
@@ -99,9 +99,9 @@
 <table>
   <body>
     <tr>
-      <td rowspan="3" class="swatch" style={mainSwatchStyle}></td>
+      <td rowspan="3" class="swatch" style={mainSwatchStyle} />
       <td>
-        <label>Hue</label>
+        <span class="label">Hue</span>
       </td>
       <td>
         <input
@@ -118,7 +118,7 @@
     </tr>
     <tr>
       <td>
-        <label>Saturation</label>
+        <span class="label">Saturation</span>
       </td>
       <td>
         <input
@@ -135,7 +135,7 @@
     </tr>
     <tr>
       <td>
-        <label>Lightness</label>
+        <span class="label">Lightness</span>
       </td>
       <td>
         <input

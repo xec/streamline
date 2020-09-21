@@ -28,7 +28,7 @@ body {
   font-size: 4em;
   font-weight: 100;
   transform: rotate(-8deg);
-  background: -webkit-linear-gradient(90deg, yellow, #ff0000 23%, #bb00ff 76%);
+  background: -webkit-linear-gradient(100deg, yellow 24%, #ff0000, #bb00ff 67%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 0 1.5rem;
