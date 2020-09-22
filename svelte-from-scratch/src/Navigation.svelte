@@ -1,9 +1,9 @@
 <script>
   import Icon from "svelte-awesome";
   import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
-  
+
   function toggleCollapsed() {
-    document.body.classList.toggle('bf-navigation-collapsed')
+    document.body.classList.toggle("bf-navigation-collapsed");
   }
 </script>
 
@@ -23,14 +23,14 @@
     left: 0;
     border-top: 2px solid var(--bfc-base);
     overflow: hidden;
-    transition: width .2s ease;
+    transition: width 0.2s ease;
   }
   .collapse-button:not(:hover) {
     background-color: var(--bfc-base-110);
   }
   .collapse-button :global(.fa-icon) {
     transform: rotate(0deg);
-    transition: transform .5s ease;
+    transition: transform 0.5s ease;
   }
   :global(.bf-navigation-collapsed) .collapse-button {
     width: var(--bf-navigation-width-collapsed);
@@ -40,10 +40,10 @@
   }
 </style>
 
-<div class="bf-navigation">
+<nav class="bf-navigation">
   <slot />
   <div on:click={toggleCollapsed} class="collapse-button">
     <Icon data={faCaretLeft} />
     Collapse
   </div>
-</div>
+</nav>
