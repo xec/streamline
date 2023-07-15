@@ -27,5 +27,11 @@
 		"typescript": "^5.0.0",
 		"vite": "^4.4.2"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@fortawesome/free-solid-svg-icons": "^6.4.0",
+		"@xec/snowflakes": "^0.0.8",
+		"@xec/svelte-todo": "^1.0.4",
+		"svelte-awesome": "^3.2.1"
+	}
 }

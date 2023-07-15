@@ -1,0 +1,45 @@
+:root,
+.bf-darkmode {
+  --bfc-base-hs: 0, 0%;
+  --bfc-base-hsl: var(--bfc-base-hs), 10%; /* darkest gray */
+  --bfc-base-200-hsl: var(--bfc-base-hs), 100%;
+  --bfc-base-200: hsl(var(--bfc-base-200-hsl)); /* white */
+  --bfc-base-180: hsl(var(--bfc-base-hs), 80%);
+  --bfc-base-150: hsl(var(--bfc-base-hs), 55%);
+  --bfc-base-120: hsl(var(--bfc-base-hs), 24%);
+  --bfc-base-110: hsl(var(--bfc-base-hs), 15%);
+  --bfc-base-100: hsl(var(--bfc-base-hsl));
+  --bfc-base-0: hsl(var(--bfc-base-hs), 0%);
+  --bfc-base: var(--bfc-base-100);
+  --bfc-base-fg: var(--bfc-base-200);
+  --bfc-base-text: var(--bfc-base-150);
+
+  --bfc-primary: #d289ff;
+  --bfc-secondary: #ffff6b;
+
+  --bf-appbar-height: 40px;
+  --bf-navigation-width: 240px;
+  --bf-navigation-width-collapsed: 50px;
+  --bfl-border: 2px solid var(--bfc-base);
+}
+
+.bf-lightmode {
+  --bfc-base-hs: 0, 0%;
+  --bfc-base-hsl: var(--bfc-base-hs), 100%; /* white */
+  --bfc-base-200-hsl: var(--bfc-base-hs), 0%;
+  --bfc-base-200: hsl(var(--bfc-base-200-hsl)); /* black */
+  --bfc-base-180: hsl(var(--bfc-base-hs), 20%);
+  --bfc-base-150: hsl(var(--bfc-base-hs), 50%);
+  --bfc-base-120: hsl(var(--bfc-base-hs), 80%);
+  --bfc-base-110: hsl(var(--bfc-base-hs), 90%);
+  --bfc-base-100: hsl(var(--bfc-base-hsl));
+  --bfc-base-0: hsl(var(--bfc-base-hs), 100%);
+  --bfc-base: var(--bfc-base-100);
+  --bfc-base-fg: var(--bfc-base-200);
+  --bfc-base-text: var(--bfc-base-150);
+
+  --bfc-primary: #9e00ff;
+  --bfc-secondary: #ca8c00;
+
+  --bfl-border: 2px solid var(--bfc-base);
+}
