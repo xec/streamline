@@ -5,13 +5,14 @@
 		faInfoCircle,
 		faSortAmountUp,
 		faBorderAll,
-		faSnowflake,
+		// faSnowflake,
 		faEyeDropper,
 		faCheck,
 		faCaretLeft,
 		faDiceD20
 	} from '@fortawesome/free-solid-svg-icons';
 
+	import '@xec/snowflakes/package/snowflakes.css';
 	import '../css/global.css';
 	import '../css/theme.css';
 	import '../css/components.css';
@@ -24,11 +25,11 @@
 <div class="bf-layout">
 	<div class="bf-appbar">
 		<a href="/" class="logo">Streamline</a>
-		<nav>
+		<!-- <nav>
 			<a href="snowflakes" class="bf-button" style="padding: 0.7rem">
 				<Icon data={faSnowflake} />
 			</a>
-		</nav>
+		</nav> -->
 	</div>
 
 	<div class="bf-navigation">
@@ -49,10 +50,10 @@
 			<Icon data={faBorderAll} />
 			Five-in-a-row
 		</a>
-		<a href="snowflakes">
+		<!-- <a href="snowflakes">
 			<Icon data={faSnowflake} />
 			Snowflakes
-		</a>
+		</a> -->
 		<a href="colors">
 			<Icon data={faEyeDropper} />
 			Colors

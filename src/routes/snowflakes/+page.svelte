@@ -1,7 +1,6 @@
-<script>
+<!-- <script>
 	// @ts-ignore
 	import snowflakes from '@xec/snowflakes';
-	import '@xec/snowflakes/package/snowflakes.css';
 
 	let speed = 1;
 	let count = 90;
@@ -34,4 +33,4 @@
 		display: inline-block;
 		width: 5rem;
 	}
-</style>
+</style> -->
