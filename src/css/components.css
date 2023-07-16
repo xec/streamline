@@ -99,12 +99,12 @@ html {
   width: 1.25em;
 }
 .bf-navigation > *:hover,
-.bf-navigation > .bf-active {
+.bf-navigation > .active {
   background-color: var(--bfc-base-120);
   text-decoration: none;
   color: var(--bfc-base-fg);
 }
-.bf-navigation > .bf-active .fa-icon {
+.bf-navigation > .active .fa-icon {
   fill: var(--bfc-primary);
 }
 .bf-navigation > hr {

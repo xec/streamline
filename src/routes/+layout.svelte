@@ -16,6 +16,7 @@
 	import '../css/global.css';
 	import '../css/theme.css';
 	import '../css/components.css';
+	import NavLink from '../components/NavLink.svelte';
 
 	function toggleCollapsed() {
 		document.body.classList.toggle('bf-navigation-collapsed');
@@ -33,39 +34,39 @@
 	</div>
 
 	<div class="bf-navigation">
-		<a href="/">
+		<NavLink href="/">
 			<Icon data={faHome} />
 			Home
-		</a>
-		<a href="about">
+		</NavLink>
+		<NavLink href="about">
 			<Icon data={faInfoCircle} />
 			About
-		</a>
+		</NavLink>
 		<hr />
-		<a href="counter">
+		<NavLink href="counter">
 			<Icon data={faSortAmountUp} />
 			Counter
-		</a>
-		<a href="fiveinarow">
+		</NavLink>
+		<NavLink href="fiveinarow">
 			<Icon data={faBorderAll} />
 			Five-in-a-row
-		</a>
+		</NavLink>
 		<!-- <a href="snowflakes">
 			<Icon data={faSnowflake} />
 			Snowflakes
 		</a> -->
-		<a href="colors">
+		<NavLink href="colors">
 			<Icon data={faEyeDropper} />
 			Colors
-		</a>
-		<a href="todo">
+		</NavLink>
+		<NavLink href="todo">
 			<Icon data={faCheck} />
 			Todo
-		</a>
-		<a href="d4roll">
+		</NavLink>
+		<NavLink href="d4roll">
 			<Icon data={faDiceD20} />
 			D4 roll
-		</a>
+		</NavLink>
 		<button on:click={toggleCollapsed} class="collapse-button">
 			<Icon data={faCaretLeft} />
 			Collapse
