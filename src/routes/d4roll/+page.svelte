@@ -32,6 +32,15 @@
 		twoHand = calc(normalizedRoll, 2);
 	}
 
+	/**
+	@example
+	[		
+		[1, 2, ..., 10],
+		[11, 12, ..., 20],
+		...,
+		[91, 92, ..., 100]
+	]
+	*/
 	const tables = new Array<number[]>(10)
 		.fill(new Array<number>(10).fill(0).map((_, i) => i + 1))
 		.map((x, i) => x.map((_, j) => (i + 1) * 10 + j + 1 - 10));
@@ -103,7 +112,7 @@
 					{#each tiers as t, j}
 						<tr>
 							<td>{t}</td>
-							<td>{t + (t > 20 ? 54 : 53)}</td>
+							<td>{t + 50 + (t > 20 ? 4 : 3)}</td>
 						</tr>
 					{/each}
 				</tbody>
