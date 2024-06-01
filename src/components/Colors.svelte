@@ -52,7 +52,7 @@
 </script>
 
 <table>
-	<body>
+	<tbody>
 		<tr>
 			<td rowspan="3" class="swatch" style={mainSwatchStyle} />
 			<td>
@@ -104,7 +104,7 @@
 				%
 			</td>
 		</tr>
-	</body>
+	</tbody>
 </table>
 
 <table class="colorTable">
