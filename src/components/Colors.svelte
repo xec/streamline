@@ -1,11 +1,9 @@
-<script>
+<script lang="ts">
 	let hue = 180;
 	let saturation = 50;
 	let baseLightness = 50;
 
-	$: percentages = percentagesFromBase(baseLightness).map((p, i) => {
-		return percToDarkAndLight(p, i, hue, saturation);
-	});
+	$: percentages = percentagesFromBase(baseLightness).map((p, i) => percToDarkAndLight(p, i, hue, saturation));
 
 	$: mainSwatchStyle = `background-color: hsl(${hue}, ${saturation}%, ${baseLightness}%)`;
 
@@ -24,7 +22,7 @@
       hsl(${hue}, 100%, ${baseLightness}%)
     )`;
 
-	function percentagesFromBase(base) {
+	function percentagesFromBase(base: number) {
 		const steps = 10;
 		let percs = [0];
 		let i = 0;
@@ -40,7 +38,7 @@
 		return percs;
 	}
 
-	function percToDarkAndLight(l, index, h, s) {
+	function percToDarkAndLight(l: number, index: number, h: number, s: number) {
 		l = Math.round(l * 100) / 100;
 		return {
 			percentage: l,
@@ -54,15 +52,15 @@
 <table>
 	<tbody>
 		<tr>
-			<td rowspan="3" class="swatch" style={mainSwatchStyle} />
+			<td rowspan="3" class="swatch" style={mainSwatchStyle}></td>
 			<td>
 				<label for="huerange">Hue</label>
 			</td>
 			<td>
-				<input id="huerange" class="hueRange" type="range" min="0" max="360" bind:value={hue} />
+				<input id="huerange" class="hueRange" type="range" min="0" max="360" bind:value={hue}>
 			</td>
 			<td>
-				<input type="number" min="0" max="360" bind:value={hue} />
+				<input type="number" min="0" max="360" bind:value={hue}>
 				°
 			</td>
 		</tr>
@@ -81,7 +79,7 @@
 				/>
 			</td>
 			<td>
-				<input type="number" min="0" max="100" bind:value={saturation} />
+				<input type="number" min="0" max="100" bind:value={saturation}>
 				%
 			</td>
 		</tr>
@@ -100,7 +98,7 @@
 				/>
 			</td>
 			<td>
-				<input type="number" min="0" max="100" bind:value={baseLightness} />
+				<input type="number" min="0" max="100" bind:value={baseLightness}>
 				%
 			</td>
 		</tr>
@@ -120,7 +118,7 @@
 	<tbody>
 		{#each percentages as p}
 			<tr class:baseColor={p.percentage === baseLightness}>
-				<td class="swatch" style={`background-color: ${p.css}`} />
+				<td class="swatch" style={`background-color: ${p.css}`}></td>
 				<td>{p.percentage}%</td>
 				<td>{p.dark}</td>
 				<td>{p.light}</td>
