@@ -1,5 +1,7 @@
 :root,
 .bf-darkmode {
+  color-scheme: dark;
+
   --bfc-base-hs: 0, 0%;
   --bfc-base-hsl: var(--bfc-base-hs), 10%; /* darkest gray */
   --bfc-base-200-hsl: var(--bfc-base-hs), 100%;
@@ -24,6 +26,8 @@
 }
 
 .bf-lightmode {
+  color-scheme: light;
+
   --bfc-base-hs: 0, 0%;
   --bfc-base-hsl: var(--bfc-base-hs), 100%; /* white */
   --bfc-base-200-hsl: var(--bfc-base-hs), 0%;
