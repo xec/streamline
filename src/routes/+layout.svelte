@@ -9,7 +9,8 @@
 		faEyeDropper,
 		faCheck,
 		faCaretLeft,
-		faDiceD20
+		faDiceD20,
+		faFont
 	} from '@fortawesome/free-solid-svg-icons';
 
 	import '@xec/snowflakes/package/snowflakes.css';
@@ -66,6 +67,10 @@
 		<NavLink href="d4roll">
 			<Icon data={faDiceD20} />
 			D4 roll
+		</NavLink>
+		<NavLink href="text">
+			<Icon data={faFont} />
+			Text style
 		</NavLink>
 		<button on:click={toggleCollapsed} class="collapse-button">
 			<Icon data={faCaretLeft} />
