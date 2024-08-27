@@ -1,7 +1,7 @@
 <script lang="ts">
 	const fonts = [{ name: 'Montserrat' }, { name: 'Arial' }, { name: '"Mr DaFoe"' }] as const;
-	const cssUnits = ['rem', 'px', 'pt'];
-	const defaultShadow = { color: '#000000', blur: 2, x: 1, y: 1, visible: true };
+	const cssUnits = ['rem', 'px', 'pt'] as const;
+	const defaultShadow = { color: '#000000', blur: 2, x: 1, y: 1, visible: true } as const;
 
 	type Shadow = typeof defaultShadow;
 

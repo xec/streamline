@@ -9,7 +9,7 @@
 	});
 </script>
 
-<div class="foo" bind:this={fooEl} />
+<div class="foo" bind:this={fooEl}></div>
 
 <style>
 	:root {

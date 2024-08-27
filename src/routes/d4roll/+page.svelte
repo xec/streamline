@@ -19,20 +19,16 @@
 		}
 	] as const;
 
-	let roll = 50;
-	let itemType: (typeof itemTypes)[number] = itemTypes[2];
+	let roll = $state(50);
+	let itemType = $state<(typeof itemTypes)[number]>(itemTypes[2]);
 
-	let lowIsGood = false;
+	let lowIsGood = $state(false);
 
-	let normalizedRoll: number, amulet: number, twoHand: number;
+	let normalizedRoll = $derived(lowIsGood ? roll * itemType.factor : roll / itemType.factor);
+	let amulet = $derived.by(() => calc(normalizedRoll, 1.5));
+	let twoHand = $derived.by(() => calc(normalizedRoll, 2));
 
-	$: {
-		normalizedRoll = lowIsGood ? roll * itemType.factor : roll / itemType.factor;
-		amulet = calc(normalizedRoll, 1.5);
-		twoHand = calc(normalizedRoll, 2);
-	}
-
-	/**
+	/** nm monster lvl
 	@example
 	[		
 		[1, 2, ..., 10],
@@ -44,6 +40,26 @@
 	const tables = new Array<number[]>(10)
 		.fill(new Array<number>(10).fill(0).map((_, i) => i + 1))
 		.map((x, i) => x.map((_, j) => (i + 1) * 10 + j + 1 - 10));
+
+	// #region mastery level
+	const priorityTargetLvls = [
+		{ factor: 1, color: 'unset', name: 'nope', min: 0 },
+		{ factor: 1.25, color: 'blue', name: 'once (blue)', min: 4 },
+		{ factor: 1.50, color: 'yellow', name: 'twice (yellow)', min: 8 }
+	] as const;
+	let selectedPriorityLvl = $state<(typeof priorityTargetLvls)[number]>(priorityTargetLvls[0]);
+	let itemMasteryLvl = $state(6)
+	let nonMasteryRoll = $state(1)
+	let masteryEquivalientRoll = $derived.by(() => {
+		let factor = selectedPriorityLvl.factor
+		let lvl = itemMasteryLvl
+		for (let index = 1; index <= lvl; index++) {
+			if (index % 4 === 0) continue
+			factor += 0.05
+		}
+		return nonMasteryRoll * factor
+	})
+	// #endregion
 </script>
 
 <svelte:head>
@@ -51,6 +67,35 @@
 </svelte:head>
 
 <div class="page">
+	<h1>Mastery level neutralizer</h1>
+	<form>
+		<div>
+			<label for="priolvl">increased by 25%?</label>
+			<select
+				id="priolvl"
+				bind:value={selectedPriorityLvl}
+				style={`border:`}
+			>
+				{#each priorityTargetLvls as lvl}
+					<option value={lvl} style={`color: ${lvl.color}`}>{lvl.name}</option>
+				{/each}
+			</select>
+		</div>
+		<div>
+			<label for="masterylvl">Mastery level: {itemMasteryLvl}</label>
+			<input type="range" min={selectedPriorityLvl.min} max="12" bind:value={itemMasteryLvl}>
+		</div>
+		<div>
+			<label for="masterroll">Non-upgraded roll</label>
+			<input id="masterroll" type="number" bind:value={nonMasteryRoll}>
+		</div>
+		<div>Masterworked equivalent:</div> 
+		<h1 style={`color: ${selectedPriorityLvl.color}`}>{+masteryEquivalientRoll.toFixed(2)}</h1>
+	</form>
+</div>
+
+<div class="page">
+	<h1>Legendary aspect roll</h1>
 	<form>
 		<div>
 			Item type
