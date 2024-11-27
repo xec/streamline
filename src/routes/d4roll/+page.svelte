@@ -70,6 +70,10 @@
 	<h1>Mastery level neutralizer</h1>
 	<form>
 		<div>
+			<label for="masterroll">Non-upgraded roll</label>
+			<input id="masterroll" type="number" bind:value={nonMasteryRoll} style="font-size: xx-large;">
+		</div>
+		<div>
 			<label for="priolvl">increased by 25%?</label>
 			<select
 				id="priolvl"
@@ -85,12 +89,8 @@
 			<label for="masterylvl">Mastery level: {itemMasteryLvl}</label>
 			<input type="range" min={selectedPriorityLvl.min} max="12" bind:value={itemMasteryLvl}>
 		</div>
-		<div>
-			<label for="masterroll">Non-upgraded roll</label>
-			<input id="masterroll" type="number" bind:value={nonMasteryRoll}>
-		</div>
 		<div>Masterworked equivalent:</div> 
-		<h1 style={`color: ${selectedPriorityLvl.color}`}>{+masteryEquivalientRoll.toFixed(2)}</h1>
+		<h1 style={`color: ${selectedPriorityLvl.color}`}>{+masteryEquivalientRoll.toFixed(1)}</h1>
 	</form>
 </div>
 
