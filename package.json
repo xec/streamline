@@ -15,7 +15,7 @@
 	"devDependencies": {
 		"@fortawesome/free-solid-svg-icons": "^6.5.2",
 		"@sveltejs/adapter-static": "^3.0.4",
-		"@sveltejs/kit": "^2.8.5",
+		"@sveltejs/kit": "^2.20.6",
 		"@sveltejs/vite-plugin-svelte": "^4.0.0-next.6",
 		"@typescript-eslint/eslint-plugin": "^7.11.0",
 		"@typescript-eslint/parser": "^7.11.0",
